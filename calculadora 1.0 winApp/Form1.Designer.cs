@@ -250,6 +250,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(319, 292);
             Controls.Add(lblOperacao);
             Controls.Add(txtResultado);
@@ -271,7 +272,9 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            ForeColor = SystemColors.ControlDarkDark;
             Name = "Calculadora";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora";
             Load += Form1_Load;
             ResumeLayout(false);

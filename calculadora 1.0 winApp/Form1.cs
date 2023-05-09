@@ -16,7 +16,7 @@ namespace calculadora_1._0_winApp
         {
 
         }
-     
+
         private void button8_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "6";
@@ -108,7 +108,7 @@ namespace calculadora_1._0_winApp
             this.operacao = "Soma";
             txtResultado.Text = "";
         }
-     
+
         private void button10_Click(object sender, EventArgs e)
         {
             valor1 = valor1 = decimal.Parse(txtResultado.Text);
