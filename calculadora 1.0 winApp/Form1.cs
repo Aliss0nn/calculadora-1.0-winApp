@@ -1,3 +1,5 @@
+using System.Configuration;
+
 namespace calculadora_1._0_winApp
 {
 
@@ -6,20 +8,34 @@ namespace calculadora_1._0_winApp
         decimal valor1;
         decimal valor2;
         string operacao = "";
+        
 
         public Calculadora()
         {
             InitializeComponent();
+
+            ConfigurarBotoes();
+        }     
+
+        private void AtribuirNumero(object? sender, EventArgs e)
+        {
+            Button botaoClicado = (Button)sender;
+
+            txtResultado.Text += botaoClicado.Text;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ConfigurarBotoes()
         {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "6";
+            btn0.Click += AtribuirNumero;
+            btn1.Click += AtribuirNumero;
+            btn2.Click += AtribuirNumero;
+            btn3.Click += AtribuirNumero;
+            btn4.Click += AtribuirNumero;
+            btn5.Click += AtribuirNumero;
+            btn6.Click += AtribuirNumero;
+            btn7.Click += AtribuirNumero;
+            btn8.Click += AtribuirNumero;
+            btn9.Click += AtribuirNumero;
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -54,54 +70,8 @@ namespace calculadora_1._0_winApp
             {
                 txtResultado.Text = Convert.ToString(valor1 / valor2);
             }
-
         }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "0";
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "1";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "2";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "3";
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "4";
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "5";
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "7";
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "8";
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            txtResultado.Text += "9";
-        }
-
+ 
         private void button20_Click(object sender, EventArgs e)
         {
             valor1 = decimal.Parse(txtResultado.Text);
